@@ -1,7 +1,7 @@
 # COMP2521-Data-Structures-Algorithms
 
 # Week01
-"""
+```
 char *a = "I love Mercy 1314"
 char b[20], char c[20], char d[20], int i 
 // extraction of data values from a string instead of file
@@ -19,7 +19,7 @@ void swap(int arryay[], int i, int j) {
     
 }
 
-"""
+```
 
 Week02
 
