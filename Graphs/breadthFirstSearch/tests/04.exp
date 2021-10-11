@@ -1,0 +1,38 @@
+Enter number of vertices: Enter number of edges: Enter edges in the form v-w: 
+Graph: nV = 10
+Edges:
+ 0: 0-1
+ 1: 1-0 1-2 1-3
+ 2: 2-1 2-4 2-5
+ 3: 3-1 3-5 3-6
+ 4: 4-2
+ 5: 5-2 5-3
+ 6: 6-3
+ 7: 7-8
+ 8: 8-7 8-9
+ 9: 9-8
+
+Enter src: Breadth first search starting at vertex 6: 6 3 1 5 0 2 4 
+
+//     int numV = GraphNumVertices(g);
+    int visited[numV];
+    for (int i = 0; i < numV; i++) {
+        visited[i] = 0;
+    }
+    
+    visited[src] = 1;
+    Queue q = QueueNew();
+    QueueEnqueue(q, src);
+    
+    while (!QueueIsEmpty(q)) {
+        Vertex v = QueueDequeue(q);
+        printf("%d ", v);
+        for (int i = 0; i < numV; i++) {
+            if (GraphIsAdjacent(g, v, i) && !visited[i]) {
+                visited[v] = 1;
+                QueueEnqueue(q, i);
+            }
+        }
+    }
+    
+    QueueFree(q);

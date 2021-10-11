@@ -1,0 +1,21 @@
+Enter the preorder traversal of the BST: Tree:
+
+1
+ \
+  9
+ /
+2
+ \
+  8
+ /
+3
+ \
+  7
+ /
+4
+ \
+  6
+ /
+5
+
+Values in postfix order: 564738291
