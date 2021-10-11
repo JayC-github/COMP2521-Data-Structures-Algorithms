@@ -2,10 +2,17 @@
 
 # Week01
 ```
-char *a = "I love Mercy 1314"
-char b[20], char c[20], char d[20], int i 
-// extraction of data values from a string instead of file
-sscanf(a, "%s %s %s %d", b, c, d, &i);
+#include <stdio.h>
+int main() {
+    char *a = "I love Mercy 1314";
+    char b[20], c[20], d[20];
+    int i;
+    // extraction of data values from a string instead of file
+    sscanf(a, "%s %s %s %d", b, c, d, &i);
+    printf("%s %s %s %d", b, c, d, i);
+    return (0);
+}
+```
 
 int N = 0;
 sscanf(argv[1], "%d", &N);
