@@ -34,8 +34,9 @@ void swap(int arryay[], int i, int j) {
 
 ```
 
-Week02
+# Week02
 
+```
 typedef struct Node {
     int value;
     struct Node *next;
@@ -73,8 +74,10 @@ bool isP(char A[], int len) {
     
     return true;
 }
+```
 
-Week03 BSTree (O(log n)) suffix tree(O(n^2))
+# Week03 BSTree (O(log n)) suffix tree(O(n^2))
+```
 typedef struct BSTNode *BSTree
 typedef struct BSTNode {
     int value;
@@ -153,9 +156,10 @@ void BSTreeLevelOrder (BSTree t)
         if (t->right != NULL) QueueJoin(new, t->right);
     }
 }
+```
 
-Week04
-
+# Week04
+```
 int printHeightDiff(BSTree t) {
     if (t == NULL) {
         printf("diff is 0.\n");
@@ -187,9 +191,9 @@ int BSTWidth(BSTree t) {
         return 3 + BSTWidth(t->left) + BSTWidth(t->right);
     }
 }
+```
 
-Week05 Splay/AVL/234 tree
-
+# Week05 Splay/AVL/234 tree
 1. splay
 not very self-balanced
 everytime instert a node rotate ==> find the most "important" node
@@ -211,7 +215,7 @@ check self-balanced (abs(height(L)- height(R) <= 1))
 
 any nodes who have above 3 values wil promote the middles node upstairs
 
-Week06 Graphs
+# Week06 & Week07 Graphs
 
 1. adjacency matrix
 2. adjacency list represnetation
@@ -224,8 +228,6 @@ Week06 Graphs
 8. Hamilton tour ==> cycle pass through all vertices
 
 
-Week07 Graphs
-
 Pime's
 
 1. prime's -->always maintains a tree, select the minimum edge could be connected.
@@ -237,9 +239,8 @@ Kruskal's
 1. always select the minimum cost edge
 2. finf the minimum spanning tree for each non conntected graph
 
-Week08
-//////////////////////////////hashing
-
+# Week08 Hashing
+```
 typedef struct HashTabRep {
     int N;
     Item **items;
@@ -255,6 +256,7 @@ HashTable newHashTable(int N) {
     
     return new;
 }
+```
 
 problem hash function relies on size of array(-> can't expand)
 collision resolution
@@ -266,6 +268,7 @@ Separate chaining
 --> solve collisions by having multiple items per array entry
 #include "Item.h"
 
+```
 Item *search(HashTable ht, key k) {
     int i= hash(k, ht->nslots);
     return ListSearch(ht->lists[i], k);
@@ -306,6 +309,7 @@ HashTable newHash(int N) {
     
    return new; 
 }
+
 
 //////////////////////////////////Seperate chaining
 1. allow multiple Items in a single array location
@@ -374,8 +378,10 @@ HashTable newHashTable(int N) {
     new->nhash2 = findSuitablePrime(N);
     return new;
 }
+```
 
-WEEK09
+# WEEK09
+```
 typedef sturct HeapRep {
     Item *items; // array of items
     int nitems;  // #items in array
@@ -466,9 +472,11 @@ n = (*fp) (2) // call the time two function with input2
 ==> 
 n = timeTwo(2);
 // High-order functions ==> take another function argument
+```
 
-Week09 Sorting
-Sorting algorithm 
+# Week09 Sorting
+# Sorting algorithm 
+```
 // selection sort
 1. fint the smallest element in the array
 2. select it and put it into the first array slot
@@ -614,6 +622,7 @@ void QuickSort(int A[],int start, int end) {
     
     }    
 }
+```
 
 // string
 Knuth-Morris-Patt string Maching algorithm
