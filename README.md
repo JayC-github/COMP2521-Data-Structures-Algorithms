@@ -12,10 +12,16 @@ int main() {
     printf("%s %s %s %d", b, c, d, i);
     return (0);
 }
-```
 
-int N = 0;
-sscanf(argv[1], "%d", &N);
+
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+    int N = 0;
+    sscanf(argv[1], "%d", &N);
+    printf("%d\n", N);
+    return (0);
+}
+
 ==>
 N = atoi(argv[1]);
 
